@@ -4,7 +4,19 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "watch": "nodemon",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "nodemonConfig": {
+    "delay": 3000,
+    "ignore": [
+      "docs/*",
+      "dist/*]",
+      "*/*.css"
+    ]
+  },
+  "events": {
+    "start": "cls || clear"
   },
   "repository": {
     "type": "git",
@@ -22,6 +34,10 @@
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "^2.25.2",
+    "nodemon": "^2.0.14",
     "prettier": "^2.4.1"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2"
   }
 }
